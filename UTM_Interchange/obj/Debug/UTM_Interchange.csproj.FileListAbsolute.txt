@@ -1,0 +1,6 @@
+C:\Users\mkargaltsev\source\repos\UTM_Interchange\UTM_Interchange\bin\Debug\UTM_Interchange.dll
+C:\Users\mkargaltsev\source\repos\UTM_Interchange\UTM_Interchange\bin\Debug\UTM_Interchange.pdb
+C:\Users\mkargaltsev\source\repos\UTM_Interchange\UTM_Interchange\obj\Debug\UTM_Interchange.csproj.CoreCompileInputs.cache
+C:\Users\mkargaltsev\source\repos\UTM_Interchange\UTM_Interchange\obj\Debug\UTM_Interchange.dll
+C:\Users\mkargaltsev\source\repos\UTM_Interchange\UTM_Interchange\obj\Debug\UTM_Interchange.pdb
+C:\Users\mkargaltsev\source\repos\UTM_Interchange\UTM_Interchange\obj\Debug\UTM_Interchange.csprojAssemblyReference.cache
