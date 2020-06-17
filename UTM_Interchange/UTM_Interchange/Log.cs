@@ -11,25 +11,26 @@ namespace UTM_Interchange
         {
             LogPath = ConfigurationManager.AppSettings.Get("LogPath");
 
-            if(LogPath == null)
+            if(LogPath == null | LogPath == "")
             {
-                LogPath = Path.GetTempPath() + "ErrorLog.xml";
+                LogPath = Path.GetTempPath();
             }
 
+            LogPath += "ExchangeUTMServiceLog_" + DateTime.Today.ToShortDateString() + ".txt";
             LogException(ex);
         }
         public Log(string entry)
         {
             LogPath = ConfigurationManager.AppSettings.Get("LogPath");
 
-            if (LogPath == null)
+            if (LogPath == null | LogPath == "")
             {
-                LogPath = Path.GetTempPath() + "ErrorLog.xml";
+                LogPath = Path.GetTempPath();
             }
 
+            LogPath += "ExchangeUTMServiceLog_" + DateTime.Today.ToShortDateString() + ".txt";
             LogEntry(entry);
         }
-
         string LogPath { get; set; }
         private void LogException(Exception ex)
         {

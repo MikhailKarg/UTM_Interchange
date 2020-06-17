@@ -25,7 +25,7 @@ namespace UTM_Interchange
         public string URL { get; set; }
         public string XMLContent { get; set; }
         public string ExchangeTypeCode { get; set; }
-        public int UTM_Id { get; set; }
+        public int UTMId { get; set; }
         public int Error { get; set; }
 
         private string GetExchangeTypeCode(string url)
@@ -50,6 +50,9 @@ namespace UTM_Interchange
 
                     SqlCommand command = new SqlCommand(sqlExpression, connection);
                     command.CommandType = CommandType.StoredProcedure;
+
+                    int sqlCommandTimeout = Convert.ToInt32(ConfigurationManager.AppSettings.Get("SQLCommandTimeout"));
+                    command.CommandTimeout = sqlCommandTimeout;
 
                     SqlParameter Content = new SqlParameter
                     {
@@ -82,7 +85,7 @@ namespace UTM_Interchange
                     SqlParameter UTM_Id = new SqlParameter
                     {
                         ParameterName = "@UTM_Id",
-                        Value = this.UTM_Id
+                        Value = this.UTMId
                     };
                     command.Parameters.Add(UTM_Id);
                     command.ExecuteNonQuery();

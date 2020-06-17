@@ -47,6 +47,7 @@
     <Compile Include="Transport.cs" />
     <Compile Include="UTM.cs" />
     <Compile Include="UTM_Data.cs" />
+    <Compile Include="UTM_Scanner.cs" />
     <Compile Include="WorkWithDB.cs" />
     <Compile Include="WorkWithXML.cs" />
   </ItemGroup>
